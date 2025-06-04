@@ -1,0 +1,63 @@
+{
+  "nodes": [
+    {
+      "id": "node-001",
+      "type": "concept",
+      "label": "信任",
+      "origin": "draft_2023_09",
+      "attributes": {
+        "synonyms": ["信赖", "trust", "依附"],
+        "first_appearance": "2023-09-14",
+        "sentiment_curve": [0.2, 0.4, 0.8, 0.3],
+        "last_used": "2025-05-01"
+      }
+    },
+    {
+      "id": "node-002",
+      "type": "emotion_segment",
+      "label": "剪影下的自由",
+      "origin": "scene_靖_回忆片段",
+      "attributes": {
+        "intensity": 0.9,
+        "associated_emotion": "释放",
+        "repetition": 3,
+        "is_resolved": false
+      }
+    },
+    {
+      "id": "node-003",
+      "type": "draft_fragment",
+      "label": "未使用片段 · 她未回头",
+      "origin": "memory_draft_v0501",
+      "attributes": {
+        "sentiment": "留白",
+        "status": "dormant",
+        "resonance_score": 0.85,
+        "recommend_rewrite": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node-001",
+      "target": "node-002",
+      "type": "emerges_as",
+      "weight": 0.7,
+      "context": "在Nana回眸场景中，‘信任’情绪在‘剪影下的自由’中浮现"
+    },
+    {
+      "source": "node-001",
+      "target": "node-003",
+      "type": "semantic_drift",
+      "weight": 0.5,
+      "context": "‘信任’在2024年变为‘依附’，并在该片段中未被重构"
+    },
+    {
+      "source": "node-002",
+      "target": "node-003",
+      "type": "fragment_refers_to",
+      "weight": 0.6,
+      "context": "‘她未回头’片段隐含‘剪影下的自由’结构未闭合"
+    }
+  ]
+}

@@ -28,3 +28,15 @@ cd kelvin
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## JingGraph Demo
+
+This repository includes a lightweight prototype of the **JingGraph** knowledge graph.
+To run the demo server and explore the sample graph data:
+
+```bash
+pip install flask
+python -m jinggraph.server sample_graph.json
+```
+
+Open <http://127.0.0.1:5000> in your browser to view the interactive graph.
