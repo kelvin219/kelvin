@@ -2,12 +2,23 @@
 
 Welcome to the Kelvin repository! This is a new project that's ready for development.
 
+## Future Policy Lab
+
+This repository now includes a prototype game called **Future City AI-UBI Simulation** located in `future_city_sim/`. The game combines philosophical simulation, institutional modeling, and system game theory to experiment with AI governance and UBI strategies in a futuristic urban setting.
+
+To play the game:
+
+```bash
+python -m future_city_sim.game
+```
+
 ## Getting Started
 
 ### Prerequisites
 
 - Git installed on your local machine
 - Your favorite code editor
+- Python 3
 
 ### Installation
 
