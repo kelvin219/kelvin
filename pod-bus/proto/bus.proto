@@ -1,0 +1,15 @@
+syntax = "proto3";
+package bus;
+
+service EventBus {
+  rpc Publish(Event) returns (Ack);
+}
+
+message Event {
+  bytes payload = 1;
+  uint64 timestamp = 2;
+}
+
+message Ack {
+  bool ok = 1;
+}

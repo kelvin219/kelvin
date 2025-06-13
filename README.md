@@ -1,30 +1,17 @@
-# Kelvin
+# Kelvin POD Layer Services
 
-Welcome to the Kelvin repository! This is a new project that's ready for development.
+This repository contains skeleton implementations for the POD layer microservices
+of the Kelvin HFT platform. Each service is independent with its own build
+instructions and Dockerfile.
 
-## Getting Started
+## Services
+- `pod-market-data-ingest` – C++ service to parse market data via DPDK.
+- `pod-orderbook-svc` – Rust order book with ChronicleMap backend.
+- `pod-bus` – Rust lock-free event bus with ns timestamps.
+- `pod-fpga-bridge` – Rust interface to FPGA using UIO/mmap.
+- `pod-strategy-svc` – Rust micro-book market making strategies.
+- `pod-risk-gate` – Go service implementing eBPF kill switch.
+- `pod-smart-order-router` – Rust router to multiple venues.
+- `pod-oms-local` – Rust service logging orders with SBE.
 
-### Prerequisites
-
-- Git installed on your local machine
-- Your favorite code editor
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/kelvin219/kelvin.git
-cd kelvin
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Each directory contains a `README.md` with build, run, and test instructions.

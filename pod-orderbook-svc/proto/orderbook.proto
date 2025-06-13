@@ -1,0 +1,16 @@
+syntax = "proto3";
+package orderbook;
+
+service OrderBook {
+  rpc SubmitOrder(Order) returns (OrderAck);
+}
+
+message Order {
+  string id = 1;
+  double price = 2;
+  uint32 qty = 3;
+}
+
+message OrderAck {
+  bool accepted = 1;
+}

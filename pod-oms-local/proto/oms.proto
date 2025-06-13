@@ -1,0 +1,16 @@
+syntax = "proto3";
+package oms;
+
+service OMSLocal {
+  rpc Log(Order) returns (Ack);
+}
+
+message Order {
+  string id = 1;
+  double price = 2;
+  uint32 qty = 3;
+}
+
+message Ack {
+  bool logged = 1;
+}

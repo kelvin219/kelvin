@@ -1,0 +1,17 @@
+syntax = "proto3";
+package router;
+
+service SmartOrderRouter {
+  rpc Route(Order) returns (RouteResult);
+}
+
+message Order {
+  string id = 1;
+  double price = 2;
+  uint32 qty = 3;
+}
+
+message RouteResult {
+  string venue = 1;
+  bool sent = 2;
+}

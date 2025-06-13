@@ -1,0 +1,16 @@
+syntax = "proto3";
+package strategy;
+
+service StrategySvc {
+  rpc Execute(Tick) returns (Action);
+}
+
+message Tick {
+  bytes data = 1;
+}
+
+message Action {
+  string venue = 1;
+  double price = 2;
+  uint32 qty = 3;
+}

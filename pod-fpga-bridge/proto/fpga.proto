@@ -1,0 +1,12 @@
+syntax = "proto3";
+package fpga;
+
+service FpgaBridge {
+  rpc Status(Empty) returns (FpgaStatus);
+}
+
+message Empty {}
+
+message FpgaStatus {
+  bool ready = 1;
+}

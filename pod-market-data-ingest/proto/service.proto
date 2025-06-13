@@ -1,0 +1,15 @@
+syntax = "proto3";
+package marketdata;
+
+service MarketDataIngest {
+  rpc Ingest(stream MarketDataPacket) returns (IngestAck);
+}
+
+message MarketDataPacket {
+  bytes data = 1;
+  uint64 timestamp = 2; // ns
+}
+
+message IngestAck {
+  bool success = 1;
+}
