@@ -1,0 +1,16 @@
+syntax = "proto3";
+package risk;
+
+service RiskGate {
+  rpc Check(Order) returns (RiskAck);
+}
+
+message Order {
+  string id = 1;
+  double price = 2;
+  uint32 qty = 3;
+}
+
+message RiskAck {
+  bool allowed = 1;
+}
