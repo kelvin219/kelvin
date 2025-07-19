@@ -8,6 +8,7 @@ Welcome to the Kelvin repository! This is a new project that's ready for develop
 
 - Git installed on your local machine
 - Your favorite code editor
+- Python 3.11 or later
 
 ### Installation
 
@@ -16,6 +17,16 @@ Welcome to the Kelvin repository! This is a new project that's ready for develop
 git clone https://github.com/kelvin219/kelvin.git
 cd kelvin
 ```
+
+## Running the Prototype
+
+A small Midway simulation demo is provided. To try it out, simply run:
+
+```bash
+python3 main.py
+```
+
+You should see the rhythm chain stages printed along with decision window feedback.
 
 ## Contributing
 
